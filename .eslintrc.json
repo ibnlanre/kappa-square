@@ -89,12 +89,6 @@
     "no-regex-spaces": 2,
     "no-sparse-arrays": 2,
     "no-unexpected-multiline": 2,
-    /*
-            function foo() {
-            return true;
-            console.log("done");
-            }
-        */
     "no-unreachable": 2,
     "use-isnan": 2,
     "valid-jsdoc": 1,

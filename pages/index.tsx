@@ -1,4 +1,14 @@
+import Home from "@/layouts/home";
+import Head from "next/head";
 
-
-import DarkModeButton from "@/components/darkModeButton";
-export default DarkModeButton;
+export default function () {
+  return (
+    <>
+      <Head>
+        <meta name="description" content="kappa-square" />
+        <title>Kappa Square</title>
+      </Head>
+      <Home />
+    </>
+  );
+}

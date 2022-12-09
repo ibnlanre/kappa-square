@@ -1,10 +1,12 @@
-import "@/css/index.css";
 import aos from "aos";
 import Head from "next/head";
-import { MantineProvider } from "@mantine/styles";
 
+import { MantineProvider } from "@mantine/core";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+
+import "../styles/tailwind.css";
+import { MenuAside } from "@/components/menuAside";
 
 function App({ Component, pageProps }) {
   const router = useRouter();
@@ -22,7 +24,6 @@ function App({ Component, pageProps }) {
   }, [router.events]);
 
   useEffect(() => {
-    // document.documentElement.classList.add("text-[18px]");
     aos.init();
   }, []);
 
@@ -57,7 +58,10 @@ function App({ Component, pageProps }) {
         {/* https://nextjs.org/docs/messages/no-document-viewport-meta */}
         {/* put <meta name="viewport" /> here */}
       </Head>
-      <Component {...pageProps} />
+      <div className="flex">
+        <MenuAside />
+        <Component {...pageProps} />
+      </div>
     </MantineProvider>
   );
 }
