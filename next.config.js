@@ -8,7 +8,7 @@ module.exports = withNextPluginPreval({
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    domains: ["localhost", "blog.afexnigeria.com", "95.179.239.31"],
+    domains: ["localhost", "images.unsplash.com", "plus.unsplash.com"],
   },
   webpack: (config) => {
     config.module.rules.push({

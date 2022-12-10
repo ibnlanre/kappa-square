@@ -28,7 +28,7 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body className="min-w-[295px]">
+        <body>
           <Main />
           <NextScript />
         </body>

@@ -58,6 +58,7 @@
     "jest": true
   },
   "rules": {
+    "@next/next/link-passhref": "off",
     "no-cond-assign": 2,
     "no-console": 0,
     "no-constant-condition": 2,
@@ -89,12 +90,6 @@
     "no-regex-spaces": 2,
     "no-sparse-arrays": 2,
     "no-unexpected-multiline": 2,
-    /*
-            function foo() {
-            return true;
-            console.log("done");
-            }
-        */
     "no-unreachable": 2,
     "use-isnan": 2,
     "valid-jsdoc": 1,
@@ -117,7 +112,7 @@
       "property"
     ],
     "dot-notation": [
-      2,
+      0,
       {
         "allowKeywords": false
       }
@@ -241,7 +236,13 @@
         "allowSingleLine": true
       }
     ],
-    "camelcase": 2,
+    "camelcase": [
+      "error",
+      {
+        "properties": "never",
+        "ignoreDestructuring": true
+      }
+    ],
     "comma-spacing": [
       2,
       {
@@ -265,10 +266,7 @@
     "eol-last": 2,
     "indent": [
       2,
-      4,
-      {
-        "SwitchCase": 1
-      }
+      2
     ],
     "key-spacing": [
       2,
@@ -371,10 +369,10 @@
     "quote-props": 0,
     "quotes": [
       2,
-      "single",
+      "double",
       "avoid-escape"
     ],
-    "require-jsdoc": 1,
+    "require-jsdoc": 0,
     "semi": [
       2,
       "always"
@@ -386,8 +384,12 @@
       "always"
     ],
     "space-before-function-paren": [
-      2,
-      "always"
+      0,
+      {
+        "anonymous": "ignore",
+        "named": "always",
+        "asyncArrow": "ignore"
+      }
     ],
     "space-in-parens": [
       2,
@@ -417,7 +419,7 @@
     ],
     "unicode-bom": 0,
     "wrap-regex": 0,
-    "arrow-body-style": 2,
+    "arrow-body-style": 0,
     "arrow-parens": 2,
     "arrow-spacing": [
       2,

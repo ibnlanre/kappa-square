@@ -12,8 +12,18 @@
       ]
     },
     {
+      "name": "@apply",
+      "description": "Use @apply to inline any existing utility classes into your own custom CSS.",
+      "references": [
+        {
+          "name": "Tailwind Documentation",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#apply"
+        }
+      ]
+    },
+    {
       "name": "@layer",
-      "description": "Use the @layer directive to tell Tailwind which “bucket” a set of custom styles belong to. Valid layers are a base, components, and utilities.",
+      "description": "Use the @layer directive to tell Tailwind which 'bucket' a set of custom styles belong to. Valid layers are a base, components, and utilities.",
       "references": [
         {
           "name": "Tailwind Documentation",

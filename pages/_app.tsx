@@ -1,17 +1,26 @@
-import "@/css/index.css";
 import aos from "aos";
 import Head from "next/head";
-import { MantineProvider } from "@mantine/styles";
 
-import { useEffect } from "react";
+import { MantineProvider } from "@mantine/core";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+
+import { DrawerAside } from "@/components/drawerAside";
+import { MenuAside } from "@/components/menuAside";
+import { NavBarMenu } from "@/components/navBarMenu";
+
+import logo from "@/assets/logo.png";
+import "../styles/tailwind.css";
+import "aos/dist/aos.css";
 
 function App({ Component, pageProps }) {
   const router = useRouter();
+  const [isContactDrawerOpen, setIsContactDrawerOpen] = useState(false);
+
   function handleRouteChange(url) {
-    window["gtag"]("config", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
-      page_path: url,
-    });
+    // window["gtag"]("config", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+    //   page_path: url,
+    // });
   }
 
   useEffect(() => {
@@ -22,7 +31,6 @@ function App({ Component, pageProps }) {
   }, [router.events]);
 
   useEffect(() => {
-    // document.documentElement.classList.add("text-[18px]");
     aos.init();
   }, []);
 
@@ -53,11 +61,19 @@ function App({ Component, pageProps }) {
       }}
     >
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={logo.src} />
         {/* https://nextjs.org/docs/messages/no-document-viewport-meta */}
         {/* put <meta name="viewport" /> here */}
       </Head>
-      <Component {...pageProps} />
+      <div className="flex">
+        <MenuAside setIsContactDrawerOpen={setIsContactDrawerOpen} />
+        <NavBarMenu />
+        <Component {...pageProps} />
+        <DrawerAside
+          setIsDrawerOpen={setIsContactDrawerOpen}
+          isDrawerOpen={isContactDrawerOpen}
+        />
+      </div>
     </MantineProvider>
   );
 }
