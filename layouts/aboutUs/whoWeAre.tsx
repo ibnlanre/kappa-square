@@ -2,7 +2,7 @@ export function WhoWeAre() {
   return (
     <section className="grid gap-9">
       <h3 className="text-3xl font-semibold">Who We Are</h3>
-      <div className="grid gap-10">
+      <div className="grid gap-10 text-justify">
         <p>
           KAPPA SQUARE LIMITED (Project Developers/Promoters) is a proprietary
           investment family office with a focus on real estate development. The

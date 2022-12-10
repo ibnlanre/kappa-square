@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function Directors({ children, person }) {
   return (
-    <div className="flex flex-col h-screen ml-5 mr-16 overflow-auto">
+    <div className="flex flex-col h-screen mx-5 sm:mr-32 clump:sm:mr-[clamp(1rem,8vw,8rem)] overflow-auto">
       {children}
 
       <Link href="/about-us">

@@ -3,7 +3,7 @@ import { DimejiOdusotePage } from "@/layouts/aboutUs/directors/dimejiOdusote";
 
 import Head from "next/head";
 
-export default function () {
+export default function DimejiOdusote() {
   return (
     <Directors person={<DimejiOdusotePage />}>
       <Head>

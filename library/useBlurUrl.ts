@@ -1,22 +1,11 @@
 "use client";
 
 type ImageType = "jpeg" | "png" | "webp";
-
-type NumericRange<
-  start extends number,
-  end extends number,
-  range extends number = end,
-  arr extends number[] = []
-> = arr["length"] extends end
-  ? range
-  : NumericRange<start, end, range | arr["length"], [...arr, arr["length"]]>;
-
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Multiply } from "ts-arithmetic";
 
 interface UseBlurURL {
   type?: `image/${ImageType}`;
-  quality?: Multiply<NumericRange<0, 9>, 0.1> | 1;
+  quality?: number;
 }
 
 export function useBlurURL({
@@ -46,7 +35,6 @@ export function useBlurURL({
   }
 
   useEffect(() => {
-    console.log(image.current);
     setUrl(canvas?.current?.toDataURL(type, quality));
   }, [image.current?.src]);
 

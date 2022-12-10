@@ -1,21 +1,21 @@
-import {
-  ActionIcon,
-  Button,
-  Divider,
-  Drawer,
-  Textarea,
-  TextInput,
-} from "@mantine/core";
-import { ArrowRight, HambergerMenu } from "iconsax-react";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Button, Divider, Textarea, TextInput } from "@mantine/core";
+import { ArrowRight } from "iconsax-react";
+import { ReactNode } from "react";
 import { Logo } from "./logo";
 
-export function ContactUs() {
+interface IContactUs {
+  children?: ReactNode;
+}
+
+export function ContactUs({ children }: IContactUs) {
   return (
-    <aside className="grid h-screen">
-      <header className="relative grid px-32 text-white py-14 bg-kappa-primary-dark">
+    <>
+      <header className="relative grid px-32 clump:px-[clamp(1rem,8vw,8rem)] text-white py-14 bg-kappa-primary-dark">
         <Logo className="absolute top-0 right-0 h-full w-max" />
-        <h2 className="text-2xl font-semibold">Contact</h2>
+        <h2 className="relative text-2xl font-semibold">
+          <span>Contact</span>
+          {children}
+        </h2>
         <div className="grid gap-4 max-w-max">
           <div>
             <p>3a Ikoya Avenue</p>
@@ -28,7 +28,7 @@ export function ContactUs() {
           </div>
         </div>
       </header>
-      <form className="grid content-between w-full gap-6 px-32 py-20">
+      <form className="grid content-between w-full gap-6 px-32 clump:px-[clamp(1rem,8vw,8rem)] py-20 clump:py-[clamp(2rem,5vw,5rem)] md:overflow-auto">
         <h2 className="text-2xl font-semibold">Your Request</h2>
         <section className="grid gap-4">
           <TextInput
@@ -57,7 +57,6 @@ export function ContactUs() {
             placeholder="Phone Number"
           />
           <Textarea
-            minRows={5}
             classNames={{
               input:
                 "bg-gray-100 placeholder-white rounded-none focus:border-none",
@@ -70,13 +69,13 @@ export function ContactUs() {
           py={0}
           className="px-6 py-4 border border-kappa-primary-dark justify-self-start h-max"
           classNames={{
-            inner: "flex gap-3 items-center",
+            inner: "flex gap-8 items-center",
           }}
           rightIcon={<ArrowRight />}
         >
           Send
         </Button>
       </form>
-    </aside>
+    </>
   );
 }

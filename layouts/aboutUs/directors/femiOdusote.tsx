@@ -24,6 +24,7 @@ export function FemiOdusotePage() {
       </figure>
       <section
         className={css({
+          textAlign: "justify",
           marginInline: "-10px",
           marginBlock: "-24px",
           "& p": {

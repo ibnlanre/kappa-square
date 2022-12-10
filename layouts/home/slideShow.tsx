@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { useEffect, useRef } from "react";
-import dynamic from "next/dynamic";
+
+import Image from "next/image";
 import anime from "animejs";
 
 const SLIDES = [
@@ -37,7 +37,7 @@ export function SlideShow() {
   }, []);
 
   return (
-    <div className="relative grid flex-1">
+    <div className="relative grid flex-1 h-screen">
       {Object.values(SLIDES).map(({ link, alt }, idx) => {
         return (
           <Image

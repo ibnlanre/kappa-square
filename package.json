@@ -15,6 +15,7 @@
   "dependencies": {
     "@emotion/css": "^11.10.5",
     "@emotion/react": "^11.10.5",
+    "@formkit/auto-animate": "^1.0.0-beta.5",
     "@mantine/carousel": "^5.9.2",
     "@mantine/core": "^5.9.1",
     "@mantine/dates": "^5.9.1",

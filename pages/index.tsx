@@ -1,7 +1,7 @@
 import Home from "@/layouts/home";
 import Head from "next/head";
 
-export default function () {
+export default function Index() {
   return (
     <>
       <Head>

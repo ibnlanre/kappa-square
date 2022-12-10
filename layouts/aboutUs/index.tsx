@@ -12,7 +12,7 @@ export function AboutUs() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="grid h-screen pl-32 overflow-auto text-justify gap-9 py-36 pr-44"
+      className="grid h-screen overflow-auto gap-9 clamp-body"
     >
       <Heading />
       <WhoWeAre />

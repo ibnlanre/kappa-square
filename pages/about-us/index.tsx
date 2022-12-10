@@ -1,7 +1,7 @@
 import { AboutUs } from "@/layouts/aboutUs";
 import Head from "next/head";
 
-export default function () {
+export default function AboutUsPage() {
   return (
     <>
       <Head>

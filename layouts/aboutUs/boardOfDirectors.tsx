@@ -32,9 +32,9 @@ export function BoardOfDirectors() {
   return (
     <section className="grid gap-9">
       <h3 className="text-3xl font-semibold">Board of Directors</h3>
-      <div className="grid grid-cols-3 gap-3 justify-items-stretch h-[30vh]">
+      <div className="grid md:grid-cols-3 gap-3 justify-items-stretch md:h-[30vh]">
         {DIRECTORS.map(({ name, image, link }) => (
-          <figure key={name} className="relative grid group">
+          <figure key={name} className="relative grid group pt-[100%]">
             <Image
               fill
               className="object-cover object-top"
@@ -43,10 +43,10 @@ export function BoardOfDirectors() {
               placeholder="blur"
               alt={name}
             />
-            <Link href={"/about-us/" + link}>
+            <Link className="relative md:static" href={"/about-us/" + link}>
               <div
                 className={clsx(
-                  "absolute grid content-end w-full gap-3 py-6 text-white opacity-0 top-[80%]",
+                  "md:absolute grid content-end w-full gap-3 py-6 text-white md:opacity-0 top-[100%] md:bottom-auto md:top-[80%]",
                   "duration-500 px-7 group-hover:bg-opacity-80 bg-primary-800 h-max group-hover:opacity-100"
                 )}
               >

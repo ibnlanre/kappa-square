@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -62,9 +64,12 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [],
   variants: {
-    extend: {
-    },
+    extend: {},
   },
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant("clump", "@supports (font-size: clamp(1rem,2vw,3rem))");
+    }),
+  ],
 };

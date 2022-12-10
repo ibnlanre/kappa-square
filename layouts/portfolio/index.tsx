@@ -14,6 +14,11 @@ type Content = {
   images: Array<StaticImageData>;
 };
 
+export type ModalContent = {
+  open: boolean;
+  content?: Content;
+};
+
 const PORTFOLIO: Array<Content> = [
   {
     property: "3A IKOYA RESIDENCE",
@@ -22,13 +27,14 @@ const PORTFOLIO: Array<Content> = [
   },
 ];
 
+const initialValue = {
+  open: false,
+  content: null
+}
+
 export function Portfolio() {
-  const [modalContent, setModalContent] = useState<{
-    open: boolean;
-    content?: Content;
-  }>({
-    open: false,
-  });
+  const [modalContent, setModalContent] = useState<ModalContent>(initialValue);
+  const closeModal = () => setModalContent(initialValue);
 
   return (
     <article
@@ -37,13 +43,13 @@ export function Portfolio() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="grid content-start w-full gap-10 pl-32 pr-44 pt-36"
+      className="grid content-start w-full gap-10 clamp-body"
     >
-      <h2 className="text-3xl font-semibold uppercase">About Us</h2>
+      <h2 className="text-3xl font-semibold uppercase">Portfolio</h2>
       <section
         style={{
           gridTemplateColumns:
-            "repeat(auto-fill, minmax(min(275px, 100%), 1fr))",
+            "repeat(auto-fill, minmax(min(300px, 100%), 1fr))",
         }}
         className="grid gap-5"
       >
@@ -62,7 +68,9 @@ export function Portfolio() {
               <Image
                 fill
                 className="object-cover"
-                src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11"
+                src={content?.images?.at(0)}
+                blurDataURL={content?.images?.at(0).blurDataURL}
+                placeholder="blur"
                 alt="about us"
               />
               <div className="absolute bottom-0 grid w-full gap-3 text-white opacity-0 p-7 bg-primary-800 group-hover:opacity-80">
@@ -73,9 +81,11 @@ export function Portfolio() {
           );
         })}
       </section>
+      
       <PortfolioModal
         modalContent={modalContent}
         setModalContent={setModalContent}
+        closeModal={closeModal}
       />
     </article>
   );
