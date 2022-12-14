@@ -24,6 +24,7 @@ export function DimejiOdusotePage() {
       </figure>
       <section
         className={css({
+          maxWidth: "100%",
           textAlign: "justify",
           marginInline: "-10px",
           marginBlock: "-24px",
