@@ -43,15 +43,15 @@ export function Portfolio() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="grid content-start w-full gap-10 clamp-body"
+      className="grid content-start w-full gap-10 px-0 clump:sm:pl-[clamp(1rem,4vw,8rem)] py-36 clump:py-[clamp(5rem,5vw,9rem)] sm:pl-32 sm:pr-44 clump:sm:pr-[clamp(.5rem,15vw,11rem)] lg:pl-32"
     >
-      <h2 className="text-3xl font-semibold uppercase">Portfolio</h2>
+      <h2 className="px-4 text-3xl font-semibold uppercase">Portfolio</h2>
       <section
         style={{
           gridTemplateColumns:
-            "repeat(auto-fill, minmax(min(300px, 100%), 1fr))",
+            "repeat(auto-fill, minmax(min(310px, 100%), 1fr))",
         }}
-        className="grid gap-5"
+        className="grid gap-5 px-0"
       >
         {PORTFOLIO.map((content) => {
           return (
@@ -73,7 +73,7 @@ export function Portfolio() {
                 placeholder="blur"
                 alt="about us"
               />
-              <div className="absolute bottom-0 grid w-full gap-3 text-white opacity-0 p-7 bg-primary-800 group-hover:opacity-80">
+              <div className="absolute bottom-0 grid w-full gap-3 text-white sm:opacity-0 p-7 bg-primary-800 group-hover:opacity-80">
                 <p className="uppercase">{content.property}</p>
                 <p>{content.address}</p>
               </div>
@@ -81,7 +81,7 @@ export function Portfolio() {
           );
         })}
       </section>
-      
+
       <PortfolioModal
         modalContent={modalContent}
         setModalContent={setModalContent}

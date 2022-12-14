@@ -37,7 +37,7 @@ export function SlideShow() {
   }, []);
 
   return (
-    <div className="relative grid flex-1 h-screen">
+    <>
       {Object.values(SLIDES).map(({ link, alt }, idx) => {
         return (
           <Image
@@ -50,6 +50,6 @@ export function SlideShow() {
           />
         );
       })}
-    </div>
+    </>
   );
 }
