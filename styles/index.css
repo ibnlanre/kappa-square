@@ -1,0 +1,6 @@
+@import "css/tailwind.css";
+@import "css/switzer.css";
+
+* {
+  font-family: 'Switzer', sans-serif;
+}

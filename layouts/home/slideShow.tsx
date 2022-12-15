@@ -3,21 +3,26 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import anime from "animejs";
 
+import IkoyaOne from "./assets/ikoya-1.jpg";
+import IkoyaTwo from "./assets/ikoya-2.jpg";
+import IkoyaThree from "./assets/ikoya-3.jpg";
+import IkoyaFour from "./assets/ikoya-4.jpg";
+
 const SLIDES = [
   {
-    link: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf",
+    image: IkoyaOne,
     alt: "Poolhaus von Wintergarten-Schmidinger aus Gramastetten",
   },
   {
-    link: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+    image: IkoyaTwo,
     alt: "white concrete building",
   },
   {
-    link: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
+    image: IkoyaThree,
     alt: "beige couch and armchair",
   },
   {
-    link: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff",
+    image: IkoyaFour,
     alt: "round clear glass-top table",
   },
 ];
@@ -38,14 +43,17 @@ export function SlideShow() {
 
   return (
     <>
-      {Object.values(SLIDES).map(({ link, alt }, idx) => {
+      {Object.values(SLIDES).map(({ image, alt }, idx) => {
         return (
           <Image
             key={idx}
+            blurDataURL={image.blurDataURL}
             ref={slides}
             className="object-cover"
+            src={image.src}
+            // height={image.height}
+            // width={image.width}
             alt={alt}
-            src={link}
             fill
           />
         );

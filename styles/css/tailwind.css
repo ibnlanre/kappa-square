@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.clamp-body {
+  @apply px-4 clump:sm:pl-[clamp(1rem,4vw,8rem)] py-36 clump:py-[clamp(5rem,5vw,9rem)] sm:pl-32 sm:pr-44 clump:sm:pr-[clamp(.5rem,15vw,11rem)] lg:pl-32;
+}
