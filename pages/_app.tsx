@@ -10,7 +10,7 @@ import { MenuAside } from "@/components/menuAside";
 import { NavBarMenu } from "@/components/navBarMenu";
 
 import logo from "@/assets/logo.png";
-import "../styles/tailwind.css";
+import "../styles/index.css";
 import "aos/dist/aos.css";
 
 function App({ Component, pageProps }) {
@@ -55,9 +55,9 @@ function App({ Component, pageProps }) {
         },
         primaryColor: "accent",
         colorScheme: "light",
-        fontFamily: "Muli, sans-serif",
+        fontFamily: "Switzer, sans-serif",
         fontFamilyMonospace: "Monaco, Courier, monospace",
-        headings: { fontFamily: "Muli, sans-serif" },
+        headings: { fontFamily: "Switzer, sans-serif" },
       }}
     >
       <Head>
