@@ -1,12 +1,12 @@
 import { ActionIcon, Drawer } from "@mantine/core";
 import { HambergerMenu } from "iconsax-react";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
+import StairWell from "@/assets/stairwell.jpeg";
 import logo from "@/assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import { useBlurURL } from "@/library/useBlurUrl";
-import { useRouter } from "next/router";
 
 const MENU = [
   {
@@ -31,7 +31,6 @@ export function NavBarMenu() {
   const [isMenuDrawerOpen, setIsMenuDrawerOpen] = useState(false);
 
   const router = useRouter();
-  const getBlurURL = useBlurURL();
 
   useEffect(() => {
     setIsMenuDrawerOpen(false);
@@ -55,7 +54,7 @@ export function NavBarMenu() {
 
       <Drawer
         size={805}
-        position="top"
+        position="right"
         opened={isMenuDrawerOpen}
         onClose={() => setIsMenuDrawerOpen(false)}
         withCloseButton={false}
@@ -65,10 +64,9 @@ export function NavBarMenu() {
       >
         <Image
           fill
-          src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6"
-          blurDataURL={getBlurURL(
-            "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6"
-          )}
+          src={StairWell.src}
+          blurDataURL={StairWell.blurDataURL}
+          loading="lazy"
           placeholder="blur"
           className="object-cover opacity-20 -z-10"
           alt="logo"

@@ -10,7 +10,7 @@ export default function Home() {
     <div className="relative grid flex-1 h-screen">
       <SlideShow />
 
-      <section className="bg-[#272727]/[.9] text-white grid gap-6 py-5 pl-3 pr-10 absolute bottom-28 left-5 max-w-[18rem]">
+      <section className="bg-[#272727]/[.9] text-white grid gap-6 py-5 pl-3 pr-10 absolute bottom-28 sm:left-5 max-w-[18rem]">
         <h3 className="text-xl font-semibold">
           We have served various capacities in the real estate value chain
         </h3>
@@ -22,7 +22,7 @@ export default function Home() {
         </Link>
       </section>
 
-      <figure className="bg-white/[.9] text-white grid gap-6 p-5 relative h-max top-28 mx-auto w-5/12">
+      <figure className="bg-white/[.9] text-white grid gap-6 p-5 relative top-28 mx-auto h-max w-36 sm:hidden">
         <Image
           src={logo}
           className="object-contain"
