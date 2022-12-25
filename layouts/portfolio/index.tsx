@@ -1,17 +1,19 @@
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
+import { PortfolioModal } from "./modal";
 
 import Hexagons from "@/assets/hexagons.png";
 
+import Ikoyi from "./assets/ikoyi/main.jpg";
 import IkoyiOne from "./assets/ikoyi/image-1.png";
-import IkoyiTwo from "./assets/ikoyi/image-2.png";
-import IkoyiThree from "./assets/ikoyi/image-3.png";
-import { PortfolioModal } from "./modal";
+// import IkoyiTwo from "./assets/ikoyi/image-2.png";
+// import IkoyiThree from "./assets/ikoyi/image-3.png";
 
 type Content = {
   property: string;
   address: string;
   images: Array<StaticImageData>;
+  main: StaticImageData;
 };
 
 export type ModalContent = {
@@ -21,16 +23,17 @@ export type ModalContent = {
 
 const PORTFOLIO: Array<Content> = [
   {
-    property: "3A IKOYA RESIDENCE",
-    address: "40A, Raymond Njoku street, Ikoyi, Lagos.",
-    images: [IkoyiOne, IkoyiTwo, IkoyiThree],
+    property: "The Residences @ 3a Ikoya",
+    address: "3a Ikoya Avenue, Ikoyi",
+    main: Ikoyi,
+    images: [IkoyiOne], //, IkoyiTwo, IkoyiThree],
   },
 ];
 
 const initialValue = {
   open: false,
-  content: null
-}
+  content: null,
+};
 
 export function Portfolio() {
   const [modalContent, setModalContent] = useState<ModalContent>(initialValue);
@@ -68,8 +71,8 @@ export function Portfolio() {
               <Image
                 fill
                 className="object-cover"
-                src={content?.images?.at(0)}
-                blurDataURL={content?.images?.at(0).blurDataURL}
+                src={content?.main.src}
+                blurDataURL={content?.main.blurDataURL}
                 placeholder="blur"
                 alt="about us"
               />
