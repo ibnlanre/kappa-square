@@ -6,8 +6,8 @@ import Hexagons from "@/assets/hexagons.png";
 
 import Ikoyi from "./assets/ikoyi/main.jpg";
 import IkoyiOne from "./assets/ikoyi/image-1.png";
-// import IkoyiTwo from "./assets/ikoyi/image-2.png";
-// import IkoyiThree from "./assets/ikoyi/image-3.png";
+import IkoyiTwo from "./assets/ikoyi/image-2.png";
+import IkoyiThree from "./assets/ikoyi/image-3.png";
 
 type Content = {
   property: string;
@@ -26,7 +26,7 @@ const PORTFOLIO: Array<Content> = [
     property: "The Residences @ 3a Ikoya",
     address: "3a Ikoya Avenue, Ikoyi",
     main: Ikoyi,
-    images: [IkoyiOne], //, IkoyiTwo, IkoyiThree],
+    images: [IkoyiOne, IkoyiTwo, IkoyiThree],
   },
 ];
 

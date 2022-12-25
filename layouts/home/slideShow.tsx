@@ -32,7 +32,7 @@ export function SlideShow() {
               opacity: 0,
             }}
             animate={{
-              opacity: [0, 1, 0],
+              opacity: [0, 1, 1, 1, 0],
             }}
             transition={{
               type: "tween",
