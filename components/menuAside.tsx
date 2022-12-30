@@ -40,7 +40,7 @@ export function MenuAside({ setIsContactDrawerOpen }: IMenuAside) {
             <Link key={link} href={link}>
               <li
                 className={clsx(
-                  "py-4 px-6",
+                  "py-4 px-6 hover:text-white hover:bg-kappa-light",
                   path === link ? "text-white bg-kappa-primary" : "text-gray-50"
                 )}
               >

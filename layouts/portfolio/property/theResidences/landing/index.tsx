@@ -31,6 +31,7 @@ export function _Landing(props, ref: MutableRefObject<HTMLElement>) {
           className="absolute w-full h-full"
         >
           <Image
+            priority
             placeholder="blur"
             blurDataURL={image.blurDataURL}
             className="object-cover"

@@ -9,6 +9,7 @@ module.exports = withNextPluginPreval({
   },
   images: {
     domains: ["localhost", "images.unsplash.com", "plus.unsplash.com"],
+    deviceSizes: [640, 768, 1080, 1440]
   },
   webpack: (config) => {
     config.module.rules.push({
