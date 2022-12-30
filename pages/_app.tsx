@@ -1,5 +1,4 @@
 import aos from "aos";
-import Head from "next/head";
 
 import { MantineProvider } from "@mantine/core";
 import { useEffect, useState } from "react";
@@ -8,8 +7,8 @@ import { Jost } from "@next/font/google";
 import { DrawerAside } from "@/components/drawerAside";
 import { MenuAside } from "@/components/menuAside";
 import { NavBarMenu } from "@/components/navBarMenu";
+import { FavIcon } from "@/components/favIcon";
 
-import logo from "@/assets/logo.png";
 import "../styles/index.css";
 import "aos/dist/aos.css";
 
@@ -50,9 +49,7 @@ function App({ Component, pageProps }) {
         colorScheme: "light",
       }}
     >
-      <Head>
-        <link rel="icon" href={logo.src} />
-      </Head>
+      <FavIcon />
       <div
         className={`${jost.variable} flex font-sans text-base overflow-auto`}
       >

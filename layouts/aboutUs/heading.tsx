@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import HouseWithMagnifyingGlass from "./assets/house-with-magnifying-glass.jpeg";
+
 export function Heading() {
   return (
     <header className="contents">
@@ -8,8 +10,11 @@ export function Heading() {
         <Image
           fill
           className="object-cover"
-          src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11"
-          alt="about us"
+          src={HouseWithMagnifyingGlass.src}
+          blurDataURL={HouseWithMagnifyingGlass.blurDataURL}
+          alt="Tierra Mallorca - House with Magnifying Glass"
+          placeholder="blur"
+          priority
         />
       </figure>
     </header>

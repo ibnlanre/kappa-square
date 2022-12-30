@@ -1,5 +1,5 @@
-import { Directors } from "@/layouts/aboutUs/directors";
-import { AyoOdusotePage } from "@/layouts/aboutUs/directors/ayoOdusote";
+import { Directors } from "@/layouts/aboutUs/boardOfDirectors/directors";
+import { AyoOdusotePage } from "@/layouts/aboutUs/boardOfDirectors/directors/ayoOdusote";
 
 import Head from "next/head";
 

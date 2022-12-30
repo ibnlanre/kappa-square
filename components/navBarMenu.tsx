@@ -3,10 +3,11 @@ import { HambergerMenu } from "iconsax-react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-import StairWell from "@/assets/stairwell.jpeg";
-import logo from "@/assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
+
+import StairWell from "@/assets/stairwell.jpeg";
+import logo from "@/assets/logo.png";
 
 const MENU = [
   {

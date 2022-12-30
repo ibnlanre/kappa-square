@@ -18,6 +18,7 @@ export function Details() {
 
       <Image
         src={SiteMap.src}
+        placeholder="blur"
         blurDataURL={SiteMap.blurDataURL}
         height={SiteMap.height}
         width={SiteMap.width}

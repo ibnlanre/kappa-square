@@ -61,9 +61,9 @@ export function Portfolio() {
                   className="object-cover"
                   src={content?.main.src}
                   blurDataURL={content?.main.blurDataURL}
+                  alt={content?.property}
                   placeholder="blur"
-                  alt="about us"
-                />
+                  />
                 <div className="absolute bottom-0 grid w-full gap-3 text-white p-7 bg-primary-800">
                   <p className="uppercase">{content.property}</p>
                   <p>{content.address}</p>
