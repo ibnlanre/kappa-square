@@ -13,15 +13,15 @@ const DIRECTORS: Array<{
   style: string;
 }> = [
   {
-    name: "Femi Odusote",
-    image: FemiOdusote,
-    link: "femi-odusote",
-    style: "object-cover object-top",
-  },
-  {
     name: "Ayo Odusote",
     image: AyoOdusote,
     link: "ayo-odusote",
+    style: "object-cover object-top",
+  },
+  {
+    name: "Femi Odusote",
+    image: FemiOdusote,
+    link: "femi-odusote",
     style: "object-cover object-top",
   },
   {
