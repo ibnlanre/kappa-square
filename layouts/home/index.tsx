@@ -31,6 +31,7 @@ export default function Home() {
           className="absolute w-full h-full"
         >
           <Image
+            priority
             placeholder="blur"
             blurDataURL={image.blurDataURL}
             className="object-cover"

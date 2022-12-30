@@ -17,6 +17,7 @@ export function Views() {
             <Image
               className="object-cover h-full"
               src={AerialView.src}
+              placeholder="blur"
               blurDataURL={AerialView.blurDataURL}
               width={AerialView.width}
               height={AerialView.height}
@@ -30,6 +31,7 @@ export function Views() {
             <Image
               className="object-cover object-bottom h-full"
               src={DrivewayView.src}
+              placeholder="blur"
               blurDataURL={DrivewayView.blurDataURL}
               width={DrivewayView.width}
               height={DrivewayView.height}
@@ -45,6 +47,7 @@ export function Views() {
             <Image
               className="object-cover object-bottom h-full"
               src={PoolGymView.src}
+              placeholder="blur"
               blurDataURL={PoolGymView.blurDataURL}
               width={PoolGymView.width}
               height={PoolGymView.height}
@@ -59,6 +62,7 @@ export function Views() {
             <Image
               className="object-cover object-bottom h-full"
               src={StreetView.src}
+              placeholder="blur"
               blurDataURL={StreetView.blurDataURL}
               width={StreetView.width}
               height={StreetView.height}
