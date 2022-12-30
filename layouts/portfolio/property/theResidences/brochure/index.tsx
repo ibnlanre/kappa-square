@@ -9,7 +9,7 @@ export function Brochure() {
     <section className="flex flex-wrap items-end justify-between gap-7">
       <div className="grid gap-3 text-gray-400">
         <h4 className="font-semibold uppercase">3A IKOYA RESIDENCE</h4>
-        <p>40A, Raymond Njoku street, Ikoyi, Lagos.</p>
+        <p>3a Ikoya Avenue, Ikoyi, Lagos</p>
         
         <div className="flex items-center gap-2">
           <ActionIcon p={0} className="text-gray-400 hover:text-gray-300">
