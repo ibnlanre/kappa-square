@@ -40,7 +40,7 @@ export function MenuAside({ setIsContactDrawerOpen }: IMenuAside) {
             <Link key={link} href={link}>
               <li
                 className={clsx(
-                  "py-4 px-6 hover:text-white hover:bg-kappa-light",
+                  "py-4 px-6 hover:text-kappa-primary-dark hover:bg-kappa-light",
                   path === link ? "text-white bg-kappa-primary" : "text-gray-50"
                 )}
               >
@@ -50,7 +50,7 @@ export function MenuAside({ setIsContactDrawerOpen }: IMenuAside) {
           ))}
           <li
             onClick={() => setIsContactDrawerOpen(true)}
-            className="px-6 py-4 cursor-pointer hover:text-white hover:bg-kappa-light text-gray-50"
+            className="px-6 py-4 cursor-pointer hover:text-kappa-primary-dark hover:bg-kappa-light text-gray-50"
           >
             Contact Us
           </li>
