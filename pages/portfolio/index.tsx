@@ -5,8 +5,8 @@ export default function PortfolioPage() {
   return (
     <>
       <Head>
-        <meta name="description" content="about-us" />
-        <title>Kappa Square | About Us</title>
+        <meta name="description" content="portfolio" />
+        <title>Kappa Square | Portfolio</title>
       </Head>
       <Portfolio />
     </>

@@ -44,19 +44,19 @@ export default function TheResidencesPage() {
       <article className="h-[100vh] w-full relative sm:pt-28">
         <Landing ref={ref} />
         <section className="absolute top-0 h-full">
-          <div className="top-0 hidden pb-6 pl-10 pt-14 lg:block sm:sticky">
+          <div className="top-0 hidden pb-6 pl-10 pt-14 lg:block lg:sticky">
             <Link href="/portfolio">
               <ActionIcon
                 className={css({
                   color: offset ? "white" : "black",
                   "&:hover": {
-                    color: "black"
+                    color: "black",
                   },
                 })}
                 ref={linkRef}
                 size="lg"
               >
-                <ArrowLeft />
+                <ArrowLeft size={30} />
               </ActionIcon>
             </Link>
           </div>
