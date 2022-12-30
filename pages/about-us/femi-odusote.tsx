@@ -7,8 +7,8 @@ export default function FemiOdusote() {
   return (
     <Directors person={<FemiOdusotePage />}>
       <Head>
-        <meta name="description" content="femi-odusote" />
-        <title>About Us | Femi Odusote</title>
+        <meta name="description" content="Femi Odusote" />
+        <title>Kappa Square | About Us</title>
       </Head>
     </Directors>
   );

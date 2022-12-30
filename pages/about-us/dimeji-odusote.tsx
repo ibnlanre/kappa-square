@@ -7,8 +7,8 @@ export default function DimejiOdusote() {
   return (
     <Directors person={<DimejiOdusotePage />}>
       <Head>
-        <meta name="description" content="dimeji-odusote" />
-        <title>About Us | Dimeji Odusote</title>
+        <meta name="description" content="Dimeji Odusote" />
+        <title>Kappa Square | About Us</title>
       </Head>
     </Directors>
   );

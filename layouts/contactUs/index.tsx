@@ -35,7 +35,7 @@ export function ContactUs({ children }: IContactUs) {
             unstyled
             classNames={{
               root: "border-b border-kappa-primary-dark",
-              input: "w-full outline-none leading-loose",
+              input: "w-full outline-none leading-loose placeholder-gray-400",
             }}
             placeholder="Your Name"
           />
@@ -43,7 +43,7 @@ export function ContactUs({ children }: IContactUs) {
             unstyled
             classNames={{
               root: "border-b border-kappa-primary-dark",
-              input: "w-full outline-none leading-loose",
+              input: "w-full outline-none leading-loose placeholder-gray-400",
             }}
             placeholder="Email"
           />
@@ -51,15 +51,17 @@ export function ContactUs({ children }: IContactUs) {
             unstyled
             classNames={{
               root: "border-b border-kappa-primary-dark",
-              input: "w-full outline-none leading-loose",
+              input: "w-full outline-none leading-loose placeholder-gray-400",
             }}
             type="tel"
             placeholder="Phone Number"
           />
           <Textarea
+            minRows={1}
             classNames={{
+              root: "border-b border-kappa-primary-dark",
               input:
-                "bg-gray-100 placeholder-white rounded-none focus:border-none",
+                "border-none p-0 text-base placeholder-gray-400 rounded-none focus:border-none",
             }}
             placeholder="Enter your message..."
           />

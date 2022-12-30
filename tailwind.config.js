@@ -1,4 +1,5 @@
 const plugin = require("tailwindcss/plugin");
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -62,7 +63,11 @@ module.exports = {
         text: "#666666",
       },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-jost)", ...fontFamily.sans],
+      },
+    },
   },
   variants: {
     extend: {},

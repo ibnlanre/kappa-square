@@ -13,13 +13,9 @@ module.exports = withNextPluginPreval({
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
-      // type: "asset",
       use: ["@svgr/webpack"],
     });
     return config;
   },
   staticPageGenerationTimeout: 300,
-  env: {
-    LIVE_TICKER_URL: process.env.LIVE_TICKER_URL,
-  },
 });
