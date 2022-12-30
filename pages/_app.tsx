@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { MantineProvider } from "@mantine/core";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { Jost } from "@next/font/google";
 
 import { DrawerAside } from "@/components/drawerAside";
 import { MenuAside } from "@/components/menuAside";
@@ -13,22 +13,14 @@ import logo from "@/assets/logo.png";
 import "../styles/index.css";
 import "aos/dist/aos.css";
 
+const jost = Jost({
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-jost",
+});
+
 function App({ Component, pageProps }) {
-  const router = useRouter();
   const [isContactDrawerOpen, setIsContactDrawerOpen] = useState(false);
-
-  function handleRouteChange(url) {
-    // window["gtag"]("config", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
-    //   page_path: url,
-    // });
-  }
-
-  useEffect(() => {
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
 
   useEffect(() => {
     aos.init();
@@ -53,19 +45,17 @@ function App({ Component, pageProps }) {
             "#C81107",
           ],
         },
+        fontFamily: "Jost, sans-serif",
         primaryColor: "accent",
         colorScheme: "light",
-        fontFamily: "Switzer, sans-serif",
-        fontFamilyMonospace: "Monaco, Courier, monospace",
-        headings: { fontFamily: "Switzer, sans-serif" },
       }}
     >
       <Head>
         <link rel="icon" href={logo.src} />
-        {/* https://nextjs.org/docs/messages/no-document-viewport-meta */}
-        {/* put <meta name="viewport" /> here */}
       </Head>
-      <div className="flex">
+      <div
+        className={`${jost.variable} flex font-sans text-base overflow-auto`}
+      >
         <MenuAside setIsContactDrawerOpen={setIsContactDrawerOpen} />
         <NavBarMenu />
         <Component {...pageProps} />

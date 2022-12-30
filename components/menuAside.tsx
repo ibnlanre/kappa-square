@@ -30,12 +30,12 @@ export function MenuAside({ setIsContactDrawerOpen }: IMenuAside) {
   const path = router.pathname;
 
   return (
-    <aside className="hidden w-64 h-screen bg-kappa-primary-dark shrink-0 sm:block">
-      <header className="px-20 bg-white py-7">
+    <aside className="flex-col hidden w-64 clump:w-[clamp(12rem,20vw,16rem)] h-screen bg-kappa-primary-dark shrink-0 sm:flex">
+      <header className="bg-white px-[30%] py-7">
         <Image src={logo} width={logo.width} height={logo.height} alt="logo" />
       </header>
-      <nav className="mt-36">
-        <ul className="grid px-8 text-center uppercase justify-items-stretch">
+      <nav className="mt-[16vmin] overflow-auto">
+        <ul className="grid px-[10%] font-medium text-center uppercase justify-items-stretch">
           {MENU.map(({ page, link }) => (
             <Link key={link} href={link}>
               <li

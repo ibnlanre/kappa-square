@@ -7,8 +7,8 @@ export default function AyoOdusote() {
   return (
     <Directors person={<AyoOdusotePage />}>
       <Head>
-        <meta name="description" content="ayo-odusote" />
-        <title>About Us | Ayo Odusote</title>
+        <meta name="description" content="Ayo Odusote" />
+        <title>Kappa Square | About Us</title>
       </Head>
     </Directors>
   );

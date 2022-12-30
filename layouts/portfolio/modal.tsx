@@ -1,4 +1,4 @@
-import { Twitter } from "./twitter";
+import { Twitter } from "@/components/twitter";
 import { ActionIcon, Modal } from "@mantine/core";
 import {
   Instagram,

@@ -48,7 +48,7 @@ export function Portfolio() {
       }}
       className="grid content-start w-full gap-10 px-0 clump:sm:pl-[clamp(1rem,4vw,8rem)] py-36 clump:py-[clamp(5rem,5vw,9rem)] sm:pl-32 sm:pr-44 clump:sm:pr-[clamp(.5rem,15vw,11rem)] lg:pl-32"
     >
-      <h2 className="px-4 text-3xl font-semibold uppercase">Portfolio</h2>
+      <h2 className="px-4 text-3xl font-semibold uppercase sm:px-0">Portfolio</h2>
       <section
         style={{
           gridTemplateColumns:
