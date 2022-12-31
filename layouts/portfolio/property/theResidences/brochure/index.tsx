@@ -29,7 +29,7 @@ export function Brochure() {
 
         <div className="flex gap-2">
           <Link
-            href="/3a-ikoya-landscape.pdf"
+            href="/3A-ikoya-landscape.pdf"
             download="The Residences Brochure"
             title="The Residences Brochure"
             target="_blank"
