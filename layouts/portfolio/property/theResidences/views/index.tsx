@@ -2,6 +2,7 @@ import AerialView from "./assets/aerial-view.jpg";
 import PoolGymView from "./assets/pool-gym-view.jpg";
 import DrivewayView from "./assets/driveway-view.jpg";
 import StreetView from "./assets/street-view.jpg";
+
 import Image from "next/image";
 
 export function Views() {
