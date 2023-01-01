@@ -1,6 +1,6 @@
 import { ActionIcon } from "@mantine/core";
 import { ArrowLeft } from "iconsax-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { css } from "@emotion/css";
 
 import Link from "next/link";
@@ -16,23 +16,31 @@ import {
 export default function TheResidencesPage() {
   const jumboRef = useRef<HTMLElement>();
   const linkRef = useRef<HTMLButtonElement>();
+  const containerRef = useRef<HTMLDivElement>();
 
   const [offset, setOffset] = useState(false);
 
-  function handleScroll() {
-    if (jumboRef.current && linkRef.current) {
-      const { top: linkTop, bottom: linkBottom } =
-        linkRef.current.getBoundingClientRect();
+  useEffect(() => {
+    if (containerRef.current && linkRef.current) {
+      const { top, bottom } = linkRef.current.getBoundingClientRect();
+      const marginBottom = containerRef.current.offsetHeight - bottom;
 
-      const { top: jumboTop, bottom: jumboBottom } =
-        jumboRef.current.getBoundingClientRect();
+      const options: IntersectionObserverInit = {
+        root: containerRef.current,
+        rootMargin: `${top}px 0px -${marginBottom}px 0px`,
+        threshold: 0.1,
+      };
 
-      setOffset(linkBottom > jumboTop && linkTop < jumboBottom);
+      const observer = new IntersectionObserver((entries) => {
+        setOffset(entries.pop().isIntersecting);
+      }, options);
+
+      observer.observe(containerRef.current.firstElementChild);
     }
-  }
+  }, [containerRef.current, linkRef.current]);
 
   return (
-    <div onScroll={handleScroll} className="grid h-screen overflow-auto">
+    <div ref={containerRef} className="grid h-screen overflow-auto">
       <Head>
         <meta name="description" content="The Residences" />
         <title>Kappa Square | Portfolio</title>
