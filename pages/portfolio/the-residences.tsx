@@ -14,46 +14,51 @@ import {
 } from "@/layouts/portfolio/property";
 
 export default function TheResidencesPage() {
-  const ref = useRef<HTMLElement>();
-  const containerRef = useRef<HTMLDivElement>();
+  const jumboRef = useRef<HTMLElement>();
   const linkRef = useRef<HTMLButtonElement>();
+  const containerRef = useRef<HTMLDivElement>();
 
-  const [scroll, setScroll] = useState(0);
   const [offset, setOffset] = useState(false);
 
   useEffect(() => {
-    if (ref.current && linkRef) {
-      const { top: linkTop, bottom: linkBottom } =
-        linkRef.current.getBoundingClientRect();
-      const { top, bottom } = ref.current.getBoundingClientRect();
-      setOffset(linkBottom > top && linkTop < bottom);
+    if (containerRef.current && linkRef.current) {
+      const { top, bottom } = linkRef.current.getBoundingClientRect();
+      const marginBottom = containerRef.current.offsetHeight - bottom;
+
+      const options: IntersectionObserverInit = {
+        root: containerRef.current,
+        rootMargin: `${top}px 0px -${marginBottom}px 0px`,
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        setOffset(entries.pop().isIntersecting);
+      }, options);
+
+      observer.observe(containerRef.current.firstElementChild);
     }
-  }, [scroll]);
+  }, [containerRef.current, linkRef.current]);
 
   return (
-    <div
-      onScrollCapture={() => setScroll(containerRef.current?.scrollTop)}
-      ref={containerRef}
-      className="grid h-screen overflow-auto"
-    >
+    <div ref={containerRef} className="grid h-screen overflow-auto">
       <Head>
         <meta name="description" content="The Residences" />
         <title>Kappa Square | Portfolio</title>
       </Head>
 
       <article className="h-[100vh] w-full relative sm:pt-28">
-        <Landing ref={ref} />
+        <Landing ref={jumboRef} />
         <section className="absolute top-0 h-full">
           <div className="top-0 hidden pb-6 pl-10 pt-14 lg:block lg:sticky">
             <Link href="/portfolio">
               <ActionIcon
+                ref={linkRef}
                 className={css({
                   color: offset ? "white" : "black",
                   "&:hover": {
                     color: "black",
                   },
                 })}
-                ref={linkRef}
                 size="lg"
               >
                 <ArrowLeft size={30} />
