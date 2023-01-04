@@ -25,7 +25,7 @@ export default function TheResidencesPage() {
       const { top, bottom } = linkRef.current.getBoundingClientRect();
       const marginBottom = containerRef.current.offsetHeight - bottom;
 
-      const options: IntersectionObserverInit = {
+      const options = {
         root: containerRef.current,
         rootMargin: `${top}px 0px -${marginBottom}px 0px`,
         threshold: 0.1,
