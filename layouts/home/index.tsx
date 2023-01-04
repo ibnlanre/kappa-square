@@ -54,7 +54,7 @@ export default function Home() {
         </Link>
       </section>
 
-      <figure className="bg-white/[.9] text-white grid gap-6 p-5 relative top-28 mx-auto h-max w-36 sm:hidden">
+      <figure className="bg-white/[.9] text-white grid gap-6 relative top-28 mx-auto h-max w-36 sm:hidden">
         <Image
           src={logo}
           className="object-contain"

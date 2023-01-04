@@ -31,7 +31,7 @@ export function MenuAside({ setIsContactDrawerOpen }: IMenuAside) {
 
   return (
     <aside className="flex-col hidden w-64 clump:w-[clamp(12rem,20vw,16rem)] h-screen bg-kappa-primary-dark shrink-0 sm:flex">
-      <header className="bg-white px-[30%] py-7">
+      <header className="bg-white px-[10%] py-7">
         <Image src={logo} width={logo.width} height={logo.height} alt="logo" />
       </header>
       <nav className="mt-[16vmin] overflow-auto">

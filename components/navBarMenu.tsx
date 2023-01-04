@@ -40,7 +40,7 @@ export function NavBarMenu() {
   return (
     <>
       <nav className="fixed top-0 flex justify-between w-full px-4 py-5 z-[300] bg-white sm:hidden">
-        <ActionIcon component={Link} href="/" className="relative h-9">
+        <ActionIcon component={Link} href="/" className="relative h-9 scale-[2.5]">
           <Image src={logo} className="object-contain" fill alt="logo" />
         </ActionIcon>
 
